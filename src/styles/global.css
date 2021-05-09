@@ -1,0 +1,233 @@
+@import url(../fonts/anton/anton.css);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: black;
+  font-family: sans-serif;
+  padding: 25px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  font-family: Anton, sans-serif;
+}
+
+input,
+textarea {
+  font-family: monospace;
+  background: transparent;
+}
+
+input,
+textarea,
+input:focus,
+textarea:focus {
+  outline: 0;
+  border: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* character sheet */
+
+.section-a,
+.section-a * {
+  --section-color-rgb: 25, 90, 136;
+  --section-icon: url(../imgs/section-a-icon.png);
+  --section-icon-displacement: -4em;
+}
+
+.section-b,
+.section-b * {
+  --section-color-rgb: 142, 16, 32;
+  --section-icon: url(../imgs/section-b-icon.png);
+  --section-icon-displacement: -4.7em;
+}
+
+.section-c,
+.section-c * {
+  --section-color-rgb: 60, 122, 113;
+  --section-icon: url(../imgs/section-c-icon.png);
+  --section-icon-displacement: -4em;
+}
+
+.reputation-gauge {
+  --gauge-color: #6184ac;
+  --gauge-color-dark: #195c8b;
+}
+.terrain-gauge {
+  --gauge-color: #ae4e4f;
+  --gauge-color-dark: #8c031c;
+}
+.credit-gauge {
+  --gauge-color: #7d9c97;
+  --gauge-color-dark: #43776c;
+}
+
+.character-sheet .sheet-section {
+  --section-color: rgb(var(--section-color-rgb));
+  --on-section-color: white;
+}
+
+.character-sheet .sheet-section {
+  border: none;
+  border-left: solid 2px var(--section-color);
+  position: relative;
+
+  margin-left: 1.1em;
+  padding: 2em 1em;
+
+  margin-bottom: 2em;
+}
+
+.character-sheet .sheet-section::after {
+  content: "";
+  border: solid 2px var(--section-color);
+  position: absolute;
+  bottom: -5.5px;
+  left: -5.5px;
+  width: 5px;
+  height: 5px;
+  background: white;
+}
+
+.character-sheet .section-header {
+  position: relative;
+
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+
+  margin-left: -2.5em;
+  margin-top: -2em;
+  margin-bottom: 1em;
+}
+
+.character-sheet .section-header .section-identifier {
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  background: var(--section-color);
+  color: var(--on-section-color);
+  border: solid 4px white;
+  font-family: Anton, sans-serif;
+}
+
+.character-sheet .section-title {
+  background: rgba(var(--section-color-rgb), 0.85);
+  color: var(--on-section-color);
+  font-size: 1.1em;
+  text-transform: uppercase;
+  padding: 0.1em 0.8em;
+  padding-left: 1.2em;
+  margin: 0.8em 0;
+  margin-left: -1em;
+}
+
+.character-sheet .section-header .section-title {
+  background: var(--section-color);
+  flex: 1;
+  margin: 0;
+  padding: 0.1em 0.8em;
+}
+
+.character-sheet .section-header::after {
+  content: var(--section-icon);
+  position: absolute;
+  display: inline-block;
+  max-width: 100%;
+  right: -3em;
+  top: var(--section-icon-displacement);
+  height: 10em;
+  width: 10em;
+  transform: scale(0.5);
+  transform-origin: 50% 50%;
+}
+
+.character-sheet .section-part {
+  margin-bottom: 25px;
+}
+
+.character-sheet .gauge-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character-sheet .gauge-part > * {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+fs-gauge input {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Story fields */
+
+.story-field {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: flex-start;
+  color: var(--section-color);
+}
+
+.story-field .description-field {
+  flex: 1;
+  resize: vertical;
+}
+
+.story-field .field-title {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  min-width: 50px;
+}
+
+.story-field .value-field {
+  width: 25px;
+  text-align: center;
+}
+
+.story-field input,
+.story-field textarea {
+  border: none;
+  min-height: 1.5em;
+  padding: 0.3em;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 1.5em,
+    rgba(var(--section-color-rgb), 0.5) 1.5em,
+    rgba(var(--section-color-rgb), 0.5) calc(1.5em + 1px)
+  );
+  line-height: 1.5;
+}
+
+.story-field textarea {
+  resize: vertical;
+  height: 3em;
+  min-height: 3em;
+}

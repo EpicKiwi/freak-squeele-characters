@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Freak Squeele Character</title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/global.css" />
+  </head>
+  <body>
+    <section class="character-sheet">
+      <section class="sheet-section section-a">
+        <header class="section-header">
+          <div class="section-identifier">A</div>
+          <h2 class="section-title">Journaux</h2>
+        </header>
+
+        <div class="section-part">
+          <div class="story-field">
+            <input
+              type="number"
+              name="story.origin.value"
+              class="value-field"
+              title="Valeur du journal"
+            />
+            <label class="field-title title" for="story-origin">Origine</label>
+            <textarea
+              name="story.origin.description"
+              id="story-origin"
+              class="description-field"
+            ></textarea>
+          </div>
+          <div class="story-field">
+            <input
+              type="number"
+              name="story.grownPlace.value"
+              class="value-field"
+              title="Valeur du journal"
+            />
+            <label class="field-title title" for="grown-place">Millieu</label>
+            <textarea
+              name="story.grownPlace.description"
+              id="story-grown-place"
+              class="description-field"
+            ></textarea>
+          </div>
+          <div class="story-field">
+            <input
+              type="number"
+              name="story.powerDiscovery.value"
+              class="value-field"
+              title="Valeur du journal"
+            />
+            <label class="field-title title" for="story-power-discovery"
+              >Pouvoir</label
+            >
+            <textarea
+              name="story.powerDiscovery.description"
+              id="story-power-discovery"
+              class="description-field"
+            ></textarea>
+          </div>
+          <div class="story-field">
+            <input
+              type="number"
+              name="story.trouble.value"
+              class="value-field"
+              title="Valeur du journal"
+              value="-1"
+            />
+            <label class="field-title title" for="story-story-trouble"
+              >Trouble</label
+            >
+            <textarea
+              name="story.trouble.description"
+              id="story-trouble"
+              class="description-field"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="section-part gauge-part">
+          <fs-gauge title="Renommée" class="reputation-gauge">
+            <input
+              type="number"
+              name="health.reputation.value"
+              title="Valeur actuelle"
+            />
+            <input
+              type="number"
+              name="health.reputation.max"
+              title="Valeur maximum"
+              slot="initial"
+            />
+          </fs-gauge>
+          <fs-gauge title="Terrain" class="terrain-gauge">
+            <input
+              type="number"
+              name="health.terrain.value"
+              title="Valeur actuelle"
+            />
+            <input
+              type="number"
+              name="health.terrain.max"
+              title="Valeur maximum"
+              slot="initial"
+            />
+          </fs-gauge>
+          <fs-gauge title="Crédit" class="credit-gauge">
+            <input
+              type="number"
+              name="health.credit.value"
+              title="Valeur actuelle"
+            />
+            <input
+              type="number"
+              name="health.credit.max"
+              title="Valeur maximum"
+              slot="initial"
+            />
+          </fs-gauge>
+        </div>
+      </section>
+
+      <section class="sheet-section section-b">
+        <header class="section-header">
+          <div class="section-identifier">B</div>
+          <h2 class="section-title">Compétences</h2>
+        </header>
+
+        <div class="section-part">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque
+          ducimus corporis assumenda voluptatum iste, porro laboriosam repellat
+          officia laborum? Magnam autem corrupti iste voluptate omnis nostrum
+          vitae quaerat cum.
+        </div>
+
+        <h3 class="section-title">Troubles & Dommages</h3>
+
+        <div class="section-part">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quos
+          expedita maiores atque nobis eum aliquam nostrum, officiis eaque iste
+          ducimus officia quibusdam! Beatae autem deserunt alias atque eos
+          voluptates.
+        </div>
+      </section>
+
+      <section class="sheet-section section-c">
+        <header class="section-header">
+          <div class="section-identifier">C</div>
+          <h2 class="section-title">Pouvoirs</h2>
+        </header>
+
+        <div class="section-part">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque
+          ducimus corporis assumenda voluptatum iste, porro laboriosam repellat
+          officia laborum? Magnam autem corrupti iste voluptate omnis nostrum
+          vitae quaerat cum.
+        </div>
+      </section>
+    </section>
+
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+</html>
